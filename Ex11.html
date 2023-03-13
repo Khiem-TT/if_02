@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex11</title>
+</head>
+<body>
+<p>Nhập thu nhập tính thuế/tháng <input type="text" id="tntt"></p>
+<button onclick="check()">Check</button>
+<b><p id="result"></p></b>
+<script>
+    function check() {
+        let tntt = +document.getElementById('tntt').value;
+        let ttncn; // ttncn là thuế thu nhập cá nhân
+        if (tntt <= 5000000) {
+            ttncn = (5 / 100) * tntt;
+            document.getElementById('result').innerHTML = 'Thuế thu nhập cá nhân: ' + ttncn.toLocaleString();
+        } else if (tntt <= 10000000) {
+            ttncn = (10 / 100) * tntt - 250000;
+            document.getElementById('result').innerHTML = 'Thuế thu nhập cá nhân: ' + ttncn.toLocaleString();
+        } else if (tntt <= 18000000) {
+            ttncn = (15 / 100) * tntt - 750000;
+            document.getElementById('result').innerHTML = 'Thuế thu nhập cá nhân: ' + ttncn.toLocaleString();
+        } else if (tntt <= 32000000) {
+            ttncn = (20 / 100) * tntt - 1950000;
+            document.getElementById('result').innerHTML = 'Thuế thu nhập cá nhân: ' + ttncn.toLocaleString();
+        } else if (tntt <= 52000000) {
+            ttncn = (25 / 100) * tntt - 4450000;
+            document.getElementById('result').innerHTML = 'Thuế thu nhập cá nhân: ' + ttncn.toLocaleString();
+        } else if (tntt <= 80000000) {
+            ttncn = (30 / 100) * tntt - 8550000;
+            document.getElementById('result').innerHTML = 'Thuế thu nhập cá nhân: ' + ttncn.toLocaleString();
+        } else {
+            ttncn = (35 / 100) * tntt - 15450000;
+            document.getElementById('result').innerHTML = 'Thuế thu nhập cá nhân: ' + ttncn.toLocaleString();
+        }
+    }
+</script>
+</body>
+</html>

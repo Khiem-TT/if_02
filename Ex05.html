@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập cạnh kề thứ nhất: <input type="text" id="side1"></p>
+<p>Nhập cạnh kề thứ hai: <input type="text" id="side2"></p>
+<button onclick="check()">Check</button>
+<b><p id="result"></p></b>
+<script>
+    function check() {
+        let a = +document.getElementById('side1').value;
+        let b = +document.getElementById('side2').value;
+        let s = (a * b) / 2;
+        document.getElementById('result').innerHTML = 'Diện tích tam giác vuông là: ' + s;
+    }
+</script>
+</body>
+</html>

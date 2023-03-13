@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex02</title>
+</head>
+<body>
+<p><input type="text" id="met"> meters</p>
+<button onclick="convert()">Convert</button>
+<b><p id="feet"></p></b>
+<script>
+    function convert() {
+        let m = +document.getElementById('met').value;
+        let f = m * 3.2808;
+        document.getElementById('feet').innerHTML = 'Bằng: ' + f + ' feet';
+    }
+</script>
+</body>
+</html>

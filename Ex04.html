@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex04</title>
+</head>
+<body>
+<p>Nhập chiều dài: <input type="text" id="side1"></p>
+<p>Nhập chiều rộng: <input type="text" id="side2"></p>
+<button onclick="check()">Check</button>
+<b><p id="result"></p></b>
+<script>
+    function check() {
+        let a = +document.getElementById('side1').value;
+        let b = +document.getElementById('side2').value;
+        let s = a * b;
+        document.getElementById('result').innerHTML = 'Diện tích hình chữ nhật là: ' + s;
+    }
+</script>
+</body>
+</html>

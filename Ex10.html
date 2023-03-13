@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex10</title>
+</head>
+<body>
+<h1>Tính số tiền điện phải trả</h1>
+<p>Số điện: <input type="text" id="en"> kW/h</p>
+<button onclick="check()">Check</button>
+<b><p id="rs"></p></b>
+<script>
+    function check() {
+        let n = +document.getElementById("en").value;
+        let rs;
+        if (n > 0 && n < 50) {
+            rs = n * 1678;
+        } else if (n < 100) {
+            rs = n * 1678 + (n - 49) * 1734;
+        } else if (n < 200) {
+            rs = n * 1678 + (n - 49) * 1734 + (n - 99) * 2014;
+        } else if (n < 300) {
+            rs = n * 1678 + (n - 49) * 1734 + (n - 99) * 2014 + (n - 199) * 2536;
+        } else if (n < 400) {
+            rs = n * 1678 + (n - 49) * 1734 + (n - 99) * 2014 + (n - 199) * 2536 + (n - 299) * 2834;
+        } else {
+            rs = n * 1678 + (n - 49) * 1734 + (n - 99) * 2014 + (n - 199) * 2536 + (n - 299) * 2834 + (n - 399) * 2927;
+        }
+        document.getElementById('rs').innerHTML = "Số tiền điện phải trả là: " + rs.toLocaleString() + ' VNĐ';
+    }
+</script>
+</body>
+</html>

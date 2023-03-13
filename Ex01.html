@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex01</title>
+</head>
+<body>
+<p><input type="text" id="c"> độ C</p>
+<button onclick="convert()">Convert</button>
+<b><p id="f"></p></b>
+<script>
+    function convert() {
+        let c = +document.getElementById('c').value;
+        let f = c * (9 / 5) + 32;
+        document.getElementById('f').innerHTML = 'Bằng: ' + f + ' độ F';
+    }
+</script>
+</body>
+</html>

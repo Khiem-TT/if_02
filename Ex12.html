@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex12</title>
+</head>
+<body>
+<p>Nhập số tiền định gửi: <input type="text" id="p"></p>
+<p>Nhập lãi suất hàng tháng: <input type="text" id="r"></p>
+<p>Nhập số tháng định gửi: <input type="text" id="n"></p>
+<button onclick="check()">Kiểm tra</button>
+<b><p id="a"></p></b>
+<script>
+    function check() {
+        let p = +document.getElementById('p').value;
+        let r = +document.getElementById('r').value;
+        let n = +document.getElementById('n').value;
+        let tl = (p * Math.pow((1 + r), n)) - p;
+        document.getElementById('a').innerHTML = 'Số tiền lãi: ' + tl.toLocaleString();
+    }
+</script>
+</body>
+</html>
